@@ -5,7 +5,7 @@ import numeral from 'numeral';
 function LineGraph() {
   const options = {
     legend: {
-      display: 'none'
+      display: false
     },
     elements: {
       point: {
@@ -38,10 +38,8 @@ function LineGraph() {
             display: false
           },
           ticks: {
-            callbacks: {
-              label: function(tooltipItem, data) {
-                return numeral(tooltipItem.value).format('+0,0');
-              }
+            callback: function(value, index, values) {
+              return numeral(value).format('0a');
             }
           }
         }
