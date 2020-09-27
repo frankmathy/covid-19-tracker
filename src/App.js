@@ -52,6 +52,10 @@ function App() {
         .then(response => response.json())
         .then(data => {
           setCountryInfo(data);
+          if (data.countryInfo && data.countryInfo.long) {
+            setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+            setMapZoom(4);
+          }
         });
     };
 
@@ -63,8 +67,6 @@ function App() {
     console.log(`Country selected: ${countryCode}`);
     setCountry(countryCode);
   };
-
-  console.log('Country info', countryInfo);
 
   return (
     <div className="app">
