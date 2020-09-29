@@ -9,7 +9,7 @@ const casesTypeColors = {
     half_op: 'rgba(204,16,52,0.5)',
     multiplier: 800
   },
-  recoveries: {
+  recovered: {
     hex: '#7dd71d',
     rgb: 'rgb(125,215,29)',
     half_op: 'rgba(125,215,29,0.5)',
